@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let animal of animals" >
+            <td> <a [routerLink]="['/animals', animal.id]">{{animal.id}}</a></td>
+            <td>{{animal.name}}</td>
+            <td>{{animal.age}}</td>
+            <td>{{animal.category}}</td>
+            <td><button (click)="deleteAnimal(animal.id)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

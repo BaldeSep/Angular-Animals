@@ -1,0 +1,9 @@
+<form (submit)="addAnimal()">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" [(ngModel)]="animal.name" placeholder="Animal Name">
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" [(ngModel)]="animal.age" placeholder="Animal Age">
+    <label for="category">Category</label>
+    <input type="text" name="category" id="category" [(ngModel)]="animal.category" placeholder="Animal Category">
+    <input type="submit" value="Submit">
+</form>

@@ -1,0 +1,22 @@
+<div>
+    <input type="number" name="searchAge" id="searchAge" [(ngModel)]="animal.age" placeholder="Enter Age">
+    <input type="number" name="searchId" id="searchId" [(ngModel)]="animal.id"  placeholder="Enter Id">
+    <button (click)="getAnimalById()" >Search Id</button>
+    <button (click)="getAnimalsByAge()" >Search Age</button>
+</div>
+
+
+<table *ngIf="animals.length">
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Category</th>
+    </thead>
+    <tbody *ngFor="let animal of animals">
+        <td>{{animal.id}}</td>
+        <td>{{animal.name}}</td>
+        <td>{{animal.age}}</td>
+        <td>{{animal.category}}</td>
+    </tbody>
+</table>
